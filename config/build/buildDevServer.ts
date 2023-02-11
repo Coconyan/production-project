@@ -4,13 +4,13 @@ import { IBuildOptions } from "./types/config";
 
 
 
-export function buildDevServer({port}: IBuildOptions): DevServerConfiguration {
+export function buildDevServer(options: IBuildOptions): DevServerConfiguration {
   return {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
+    // static: {
+    //   directory: path.join(__dirname, 'public'),
+    // },
 
-    port: port,
+    port: options.port,
     open: true,
     historyApiFallback: true,
   }
