@@ -4,6 +4,11 @@ import { IBuildOptions } from "./types/config";
 
 export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
 
+  const svgLoader: webpack.RuleSetRule = {
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+  };
+
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -23,6 +28,11 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
     ],
   };
 
+  const imgLoader: webpack.RuleSetRule = {
+    test: /\.(png|jpg|jpeg|gif)$/i,
+    type: 'asset/resource',
+  };
+
   // Если использовать js, то добавить babel
   const typescriptLoader = {
     test: /\.tsx?$/,
@@ -31,6 +41,8 @@ export function buildLoaders({ isDev }: IBuildOptions): webpack.RuleSetRule[] {
   };
 
   return [
+    imgLoader,
+    svgLoader,
     typescriptLoader,
     cssLoader,
   ]
