@@ -20,7 +20,6 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = (props) => {
       onClick={toggleTheme}
     >
       {theme === Theme.LIGHT ? <DarkIcon /> : <LightIcon />}
-      {/* Toggle theme to {theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT} */}
     </Button>
   );
 }
