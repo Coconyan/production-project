@@ -1,0 +1,6 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    "i18next-extract" // todo probably delete from prod
+  ]
+}
