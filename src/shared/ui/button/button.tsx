@@ -20,10 +20,12 @@ export const Button: React.FC<ButtonProps> = (props) => {
   } = props;
 
   return (
-    <button {...otherProps}
+    <button
+      type="button"
+      {...otherProps}
       className={classNames(cls.Button, {}, [className, cls[theme]])}
     >
       {children}
     </button>
   );
-}
+};

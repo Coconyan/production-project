@@ -1,10 +1,10 @@
-import "./styles/index.scss";
-import { classNames } from "helpers/classNames/classNames";
-import { useTheme } from "app/provider/ThemeProvider";
-import { AppRouter } from "./provider/router";
-import { Navbar } from "widgets/Navbar";
-import { Sidebar } from "widgets/Sidebar";
-import { Suspense } from "react";
+import './styles/index.scss';
+import { classNames } from 'helpers/classNames/classNames';
+import { useTheme } from 'app/provider/ThemeProvider';
+import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
+import { Suspense } from 'react';
+import { AppRouter } from './provider/router';
 
 export const App = () => {
   const { theme } = useTheme();
@@ -19,5 +19,5 @@ export const App = () => {
         </div>
       </Suspense>
     </div>
-  )
+  );
 };
