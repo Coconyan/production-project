@@ -8,13 +8,15 @@ export type BuildPaths = {
 }
 
 export interface IBuildEnv {
-  mode: BuildMode;
-  port: number;
+  mode: BuildMode,
+  port: number,
+  analyze: boolean,
 }
 
 export interface IBuildOptions {
   paths: BuildPaths,
   mode: BuildMode,
   isDev: boolean,
+  analyze: boolean,
   port: number,
 }
