@@ -1,5 +1,7 @@
 {
   "Language": "Русский",
   "toggle": "переключить",
-  "Page not found": "Страница не найдена"
+  "Page not found": "Страница не найдена",
+  "Something went wrong": "Что-то пошло не так",
+  "Reload Page": "Перезагрузить страницу"
 }
